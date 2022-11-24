@@ -1,3 +1,4 @@
+import { NotFoundComponent } from './not-found/not-found.component';
 import { DataService } from './consuming-http-services/services/data.service';
 import { AppErrorHandler } from './consuming-http-services/validators/app-error-handler';
 import { ErrorHandler } from '@angular/core';
@@ -25,6 +26,9 @@ import { NewCourseFormComponent } from './reactive-form/new-course-form/new-cour
 import { PostComponent } from './consuming-http-services/components/post/post.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GithubFollowersComponent } from './exercises/github-followers/github-followers.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -43,6 +47,9 @@ import { GithubFollowersComponent } from './exercises/github-followers/github-fo
     NewCourseFormComponent,
     PostComponent,
     GithubFollowersComponent,
+    NavbarComponent,
+    NotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
