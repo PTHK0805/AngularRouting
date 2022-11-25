@@ -2,6 +2,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Component, OnInit } from '@angular/core';
 import { GithubFollowersService } from 'src/app/exercises/github-followers/github-followers.service';
+import { merge } from 'rxjs';
 
 @Component({
   selector: 'app-github-followers',
@@ -26,7 +27,11 @@ export class GithubFollowersComponent implements OnInit {
     
     this.route.queryParamMap.subscribe(params => {
       console.log('Query Params', params);
-   })
+    })
+    
+    merge(this.route.paramMap, this.route.queryParamMap).subscribe((combine: any) => {
+      console.log('Combined ',combine);
+    })
   }
 
 }
