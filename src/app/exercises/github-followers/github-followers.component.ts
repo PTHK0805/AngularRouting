@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 
 import { Component, OnInit } from '@angular/core';
 import { GithubFollowersService } from 'src/app/exercises/github-followers/github-followers.service';
@@ -11,7 +12,7 @@ export class GithubFollowersComponent implements OnInit {
 
   followers: any;
  
-  constructor(private service: GithubFollowersService) {}
+  constructor(private service: GithubFollowersService, private route: ActivatedRoute) {}
 
   getFollower(follower: any) {
     console.log(follower);
@@ -23,7 +24,9 @@ export class GithubFollowersComponent implements OnInit {
       console.log(followers);
     })
     
-   
+    this.route.queryParamMap.subscribe(params => {
+      console.log('Query Params', params);
+   })
   }
 
 }
