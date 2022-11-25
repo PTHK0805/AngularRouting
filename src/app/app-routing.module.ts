@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'followers/:id', component: GithubFollowerProfileComponent },
+  { path: 'followers/:username/:id', component: GithubFollowerProfileComponent },
   { path: 'followers', component: GithubFollowersComponent },
   { path: 'posts', component: PostComponent },
   { path: '**', component: NotFoundComponent }

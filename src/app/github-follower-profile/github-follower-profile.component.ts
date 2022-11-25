@@ -27,6 +27,11 @@ export class GithubFollowerProfileComponent implements OnInit {
 
     let id = this.route.snapshot.params['id'];
     console.log('ID from snapshot', id);
+
+    // Get All Route Parameters
+    this.route.paramMap.subscribe(params => {
+      console.log('All params', params);
+    })
   }
 
 }
