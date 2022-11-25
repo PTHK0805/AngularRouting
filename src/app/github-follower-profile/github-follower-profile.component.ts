@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { merge, of } from 'rxjs';
 
 @Component({
@@ -8,11 +8,17 @@ import { merge, of } from 'rxjs';
   styleUrls: ['./github-follower-profile.component.scss'],
 })
 export class GithubFollowerProfileComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ob1 = of(1, 2, 3, 4, 5);
   ob2 = of(6, 7, 8, 9, 10);
   ob3 = merge(this.ob1, this.ob2);
+
+  submit() {
+    this.router.navigate(['/followers'], {
+      queryParams: {id: 1, page: 'newest'}
+    })
+  }
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
