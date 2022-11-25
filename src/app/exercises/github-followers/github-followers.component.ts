@@ -13,6 +13,10 @@ export class GithubFollowersComponent implements OnInit {
  
   constructor(private service: GithubFollowersService) {}
 
+  getFollower(follower: any) {
+    console.log(follower);
+  }
+
   ngOnInit(): void {
     this.service.getAll().subscribe(followers => {
       this.followers = followers

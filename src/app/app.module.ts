@@ -28,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { GithubFollowersComponent } from './exercises/github-followers/github-followers.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { GithubFollowerProfileComponent } from './github-follower-profile/github-follower-profile.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { HomeComponent } from './home/home.component';
     GithubFollowersComponent,
     NavbarComponent,
     NotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    GithubFollowerProfileComponent
   ],
   imports: [
     BrowserModule,
