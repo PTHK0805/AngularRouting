@@ -1,3 +1,5 @@
+import { ArchiveComponent } from './exercises/routing-exercise/archive/archive.component';
+import { BlogComponent } from './exercises/routing-exercise/blog/blog.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PostComponent } from './consuming-http-services/components/post/post.component';
 import { GithubFollowerProfileComponent } from './github-follower-profile/github-follower-profile.component';
@@ -11,6 +13,8 @@ const routes: Routes = [
   { path: 'followers/:username/:id', component: GithubFollowerProfileComponent },
   { path: 'followers', component: GithubFollowersComponent },
   { path: 'posts', component: PostComponent },
+  { path: 'archive/:year/:month', component: ArchiveComponent },
+  { path: 'archive', component: BlogComponent },
   { path: '**', component: NotFoundComponent }
  
 ];

@@ -29,6 +29,8 @@ import { GithubFollowersComponent } from './exercises/github-followers/github-fo
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { GithubFollowerProfileComponent } from './github-follower-profile/github-follower-profile.component';
+import { BlogComponent } from './exercises/routing-exercise/blog/blog.component';
+import { ArchiveComponent } from './exercises/routing-exercise/archive/archive.component';
 
 
 @NgModule({
@@ -51,7 +53,9 @@ import { GithubFollowerProfileComponent } from './github-follower-profile/github
     NavbarComponent,
     NotFoundComponent,
     HomeComponent,
-    GithubFollowerProfileComponent
+    GithubFollowerProfileComponent,
+    BlogComponent,
+    ArchiveComponent
   ],
   imports: [
     BrowserModule,
